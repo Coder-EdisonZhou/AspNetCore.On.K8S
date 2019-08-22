@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-demo
+  namespace: aspnetcore
+  labels:
+    name: k8s-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: k8s-demo
+  template:
+    metadata:
+      labels:
+        name: k8s-demo
+    spec:
+      containers:
+      - name: k8s-demo
+        image: edisonsaonian/k8s-demo
+        ports:
+        - containerPort: 80
+        imagePullPolicy: Always
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: k8s-demo
+  namespace: aspnetcore
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    name: k8s-demo
