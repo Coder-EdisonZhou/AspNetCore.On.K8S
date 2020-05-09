@@ -124,3 +124,8 @@ UpgradeLog*.XML
 /src/.vs/CanalSharp.AspNetCore/v15/Server/sqlite3/*.ide-shm
 /src/.vs/CanalSharp.AspNetCore/v15/Server/sqlite3/*.ide-wal
 /src/.vs/CanalSharp.AspNetCore/DesignTimeBuild/*.dtbcache
+/src/03_ingress-demo/.vs/EDC.K8S.Demo.WebApi/DesignTimeBuild/*.dtbcache
+/src/03_ingress-demo/.vs/EDC.K8S.Demo.WebApi/v15/Server/sqlite3/*.lock
+/src/03_ingress-demo/.vs/EDC.K8S.Demo.WebApi/v15/Server/sqlite3/*.ide
+/src/03_ingress-demo/.vs/EDC.K8S.Demo.WebApi/v15/Server/sqlite3/*.ide-shm
+/src/03_ingress-demo/.vs/EDC.K8S.Demo.WebApi/v15/Server/sqlite3/*.ide-wal

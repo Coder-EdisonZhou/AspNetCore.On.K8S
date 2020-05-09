@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: apple-api-demo
+  namespace: xdp-poc
+  labels:
+    name: apple-api-demo
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      name: apple-api-demo
+  template:
+    metadata:
+      labels:
+        name: apple-api-demo
+    spec:
+      containers:
+      - name: apple-api-demo
+        image: edisonsaonian/apple-api-demo:1.0
+        ports:
+        - containerPort: 80
+        imagePullPolicy: IfNotPresent
+
+---
+
+kind: Service
+apiVersion: v1
+metadata:
+  name: apple-api-svc
+  namespace: xdp-poc
+spec:
+  type: NodePort
+  ports:
+    - port: 80
+      targetPort: 80
+  selector:
+    name: apple-api-demo
