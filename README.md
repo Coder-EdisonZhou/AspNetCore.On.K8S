@@ -6,6 +6,8 @@ ASP.NET Core On K8S系列文章示例代码
   	Hello Kubernetes
   - Part 2 :
   	Rolling Update
+  - Part 3 :
+    Nginx Ingress
 
 ### 了解更多？
 [.NET Core on K8S学习实践系列文章索引](https://www.cnblogs.com/edisonchou/p/aspnet_core_k8s_artcles_index.html)
